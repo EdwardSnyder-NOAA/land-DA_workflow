@@ -391,8 +391,8 @@ def set_machine_parm(machine):
             MAX_CORES_PER_NODE = 40
         case "ursa":
             CUSTOM_JEDI_CONFIG_PATH = "/scratch3/NAGAPE/epic/UFS_Land-DA_v3.0/inputs/test_base/jedi_yaml"
-            JEDI_IODACONV_PATH = "/scratch3/NAGAPE/epic/UFS_Land-DA_v3.0/jedi_bundle_ursa/build/lib/python3.11"
-            JEDI_PATH = "/scratch3/NAGAPE/epic/UFS_Land-DA_v3.0/jedi_bundle_ursa"
+            JEDI_IODACONV_PATH = "/scratch3/NCEPDEV/nems/Edward.Snyder/ss-192-cont/landda/jedi-bundle/build/lib/python3.11"
+            JEDI_PATH = "/scratch3/NCEPDEV/nems/Edward.Snyder/ss-192-cont/landda"
             MAX_CORES_PER_NODE = 192
         case "singularity":
             CUSTOM_JEDI_CONFIG_PATH = "SINGULARITY_WORKING_DIR"
