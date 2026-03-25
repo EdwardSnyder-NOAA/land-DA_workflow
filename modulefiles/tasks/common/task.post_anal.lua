@@ -8,6 +8,8 @@ load(pathJoin("netcdf-fortran", netcdf_fortran_ver))
 load(pathJoin("prod_util", prod_util_ver))
 
 prepend_path("MODULEPATH", os.getenv("modulepath_pymodule"))
+setenv("NDATE", os.getenv("ndate_path"))
+prepend_path("APPTAINERENV_LD_LIBRARY_PATH", "/scratch3/NCEPDEV/nems/Edward.Snyder/ss-192-cont/landda/land-DA_workflow/lib64")
 
 load("python-ufs-land-da-wflow")
 

@@ -2,7 +2,7 @@ prepend_path("MODULEPATH", os.getenv("modulepath_modulefiles"))
 
 load(pathJoin("stack-oneapi", stack_oneapi_ver))
 load(pathJoin("prod_util", prod_util_ver))
-
+setenv("NDATE", os.getenv("ndate_path"))
 prepend_path("MODULEPATH", os.getenv("modulepath_pymodule"))
 
 load("python-ufs-land-da-wflow")
