@@ -142,6 +142,8 @@ EOF
       fi
 
       # Convert to IODA format
+      module list
+      which python
       fims_out_fn="IMSscf.${PDY}.C${RES}_oro_data.nc"
       ${USHlandda}/imsfv3_scf2ioda.py -i ${fims_out_fn} -o ${obs_out_fn_ims}
       if [ $? -ne 0 ]; then

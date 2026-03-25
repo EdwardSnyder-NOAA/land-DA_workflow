@@ -20,7 +20,7 @@ filedate=${YYYY}${MM}${DD}.${HH}0000
 
 machines_srun=( "gaeac6" "hercules" "orion" "ursa" )
 if [[ ${machines_srun[@]} =~ "${MACHINE}" ]]; then
-  run_cmd="srun"
+  run_cmd="srun --mpi=pmi2"
 else
   run_cmd=`which mpiexec`
 fi
