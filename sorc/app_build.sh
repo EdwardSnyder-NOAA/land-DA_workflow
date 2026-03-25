@@ -361,8 +361,11 @@ if [ "${CLEAN}" = true ]; then
   fi
 else
   printf "... Generate CMAKE configuration ...\n"
-  ecbuild ${SORC_DIR} ${CMAKE_SETTINGS} 2>&1 | tee log.ecbuild
-
+  #printf "echo $PATH \n"
+  which ecbuild
+  #exit 3
+  /scratch3/NCEPDEV/nems/Edward.Snyder/ss-192-cont/noaa-dev-demo/modulefiles/spack-stack-1.9.2/bin/ecbuild ${SORC_DIR} ${CMAKE_SETTINGS} 2>&1 | tee log.ecbuild
+  #ecbuild ${SORC_DIR} ${CMAKE_SETTINGS} 2>&1 | tee log.ecbuild
   printf "... Compile executables ...\n"
   make ${MAKE_SETTINGS} 2>&1 | tee log.make
 
@@ -380,13 +383,13 @@ else
     done
     # copy libraries
     mkdir -p ${HOME_DIR}/lib64
-    cd ${BUILD_DIR}/lib64
+    cd ${BUILD_DIR}/lib
     for file in *; do
       [ -f "${file}" ] && cp "${file}" "${HOME_DIR}/lib64"
     done
   fi
 fi
-
+make-external "${HOME_DIR}/exec/*"
 # Link land-DA input files to FIXlandda directory
 ver_fix_data="_v3.0"
 if [ "${PLATFORM}" = "ursa" ]; then
