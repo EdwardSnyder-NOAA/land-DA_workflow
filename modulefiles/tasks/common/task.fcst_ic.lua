@@ -11,7 +11,6 @@ load(pathJoin("parallelio", parallelio_ver))
 load(pathJoin("esmf", esmf_ver))
 load(pathJoin("g2", g2_ver))
 load(pathJoin("prod_util", prod_util_ver))
-setenv("NDATE", os.getenv("ndate_path"))
 
 prepend_path("MODULEPATH", os.getenv("modulepath_pymodule"))
 

@@ -361,9 +361,6 @@ if [ "${CLEAN}" = true ]; then
   fi
 else
   printf "... Generate CMAKE configuration ...\n"
-  #printf "echo $PATH \n"
-  which ecbuild
-  #exit 3
   /scratch3/NCEPDEV/nems/Edward.Snyder/ss-192-cont/noaa-dev-demo/modulefiles/spack-stack-1.9.2/bin/ecbuild ${SORC_DIR} ${CMAKE_SETTINGS} 2>&1 | tee log.ecbuild
   #ecbuild ${SORC_DIR} ${CMAKE_SETTINGS} 2>&1 | tee log.ecbuild
   printf "... Compile executables ...\n"
