@@ -7,6 +7,6 @@ whatis([===[Loads libraries needed for running the land-DA workflow on Ursa ]===
 
 load("rocoto")
 
-prepend_path("MODULEPATH","/scratch3/NAGAPE/epic/ufs-conda/modulefiles")
+prepend_path("MODULEPATH","/scratch3/NCEPDEV/nems/Edward.Snyder/ss-192-cont/landda/modulefiles")
 load("python-ufs-land-da-wflow")
 
